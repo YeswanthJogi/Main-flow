@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eef2f7; /* light bluish background */
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #ffffff; /* subtle white container */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #1e40af; /* soft blue heading */
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+form input[type="text"] {
+  width: 50%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem 0 0 0.25rem;
+  outline: none;
+  font-size: 1rem;
+  background-color: #fefefe; /* light input */
+}
+
+form button {
+  background-color: #1e40af;
+  color: #fff;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+form button:hover {
+  background-color: #3b82f6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+/* Movie Cards with subtle background colors */
+.movie-card {
+  background-color: #fefefe; /* light card background */
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  background-color: #e2e8f0; /* placeholder if image not loaded */
+}
+
+.movie-card h2 {
+  font-size: 1rem;
+  margin: 0.5rem 0 0.2rem 0;
+  padding: 0 0.5rem;
+}
+
+.movie-card p {
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem 0;
+  color: #555;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #ffffff; /* white background */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.movie-details img {
+  border-radius: 0.5rem;
+  width: 300px;
+  margin-bottom: 1rem;
+}
+
+.movie-details h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #1e40af;
+}
+
+.movie-details p {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+  text-align: center;
+}
+
+.movie-details .genres {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #3b82f6;
+}
+
+@media (max-width: 768px) {
+  form input[type="text"] {
+    width: 70%;
+  }
+  .movie-details img {
+    width: 80%;
+  }
+}
